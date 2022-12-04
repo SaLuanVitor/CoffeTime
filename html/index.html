@@ -6,9 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="shortcut icon" href="../imagens/favicon.ico" type="image/x-icon">
-  <link rel="stylesheet" href="../style/geral/style.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-  <script src="../plugins/scripts/index.js"></script>
+  <link rel="stylesheet" href="../style/index/style.css">
   <title>Meu site</title>
 </head>
 
@@ -26,23 +24,23 @@
             <a href="../html/index.html"><img src="../imagens/header/coffeLogo.png" alt="Logo Coffe"></a>
             <div class="listNav">
               <ul class="listNavTop">
-                <li><a href="../html/index.html">Inicio</a></li>
+                <li><a href="/html/index.html" id="inicioDec">Inicio</a></li>
                 <li class="tipos"><a>Tipos &#9660;</a>
                   <ul class="menuHover">
-                    <li><a href="#">Grão</a></li>
+                    <li><a href="../html/pages/tipos/grão.html">Grão</a></li>
                     <li><a href="#">Moído</a></li>
                     <li><a href="#">Cápsula</a></li>
-                    <li><a href="#">Drip</a></li>
                   </ul>
                 </li>
                 <li><a href="#">Caminhada do Café</a></li>
                 <li><a href="#">Curiosidades</a></li>
               </ul>
               <ul class="listNavBottom">
-                <li><a href="#">Sobre</a></li>
-                <li><a href="#">Origem</a></li>
-                <li><a href="#">Lenda</a></li>
-                <li><a href="#">Videos</a></li>
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#origem">Origem</a></li>
+                <li><a href="#lenda">Lenda</a></li>
+                <li><a href="#videos">Videos</a></li>
+                <li><a href="#info">Informações</a></li>
               </ul>
             </div>
             <div class="menu_btn">
@@ -62,25 +60,68 @@
     <figure class="backgroundCoffe">
       <img src="../imagens/main/background/BackgroundCoffe.jpg" alt="Plano de fundo com café e grãos de café">
     </figure>
-    <section class="sobre">
+    <section class="sobre" id="sobre">
       <figure class="icons">
-        <img src="../imagens/main/icons/coffeeGrao.png" alt="Gãos de café">
-        <img src="../imagens/main/icons/coffeePacote.png" alt="Pacote de café">
-        <img src="../imagens/main/icons/coffeePot.png" alt="Garrafa de café">
-        <img src="../imagens/main/icons/coffeeCup.png" alt="Xícara de café">
+        <img onclick="mostrarModalGrao()" src="../imagens/main/Sobre/icons/coffeeGrao.png" alt="Gãos de café">
+        <figcaption id="graoH" class="cardHover">
+          <h4>Curiosidades sobre o Café</h4>
+          <div>
+            <p>Vamos começar apresentando um dado impressionante: cerca de 400 bilhões de xícaras de café são servidas todos os dias pelo mundo.</p>
+            <p>Aqui no Brasil, o consumo médio por pessoa é de cerca de 5 quilos de café ao ano, o que equivale a uma média de 80 litros.</p>
+            <p>Mas, mas vamos voltar ao início de tudo. Existem várias teorias acerca do descobrimento do café. No entanto, a mais aceita é de que um pastor de cabras etíope percebeu que o rebanho ficava muito eufórico após comer algumas frutas avermelhadas que caíam de uma árvore específica. Certa vez, ele decidiu prová-las e conheceu, então, o poder estimulante deste grão.</p>
+            <p>Para tornar o café nutritivo e enérgico, os europeus, por influência dos Países Baixos (região leiteira), começaram a misturá-lo com leite. Mas, isso não se prolongou por muito tempo, uma vez que o leite não era produzido por muitas regiões do continente.</p>
+          </div>
+        </figcaption>
+
+        <img onclick="mostrarModalPacote()" src="../imagens/main/Sobre/icons/coffeePacote.png" alt="Pacote de café">
+        <figcaption id="pacoteH" class="cardHover">
+          <h4>Benefícios do café para a Saúde</h4>
+          <div>
+            <p>Uma pesquisa realizada com 140 mil pessoas pela Escola de Saúde Pública da Universidade de Harvard (EUA) mostrou que quatro doses diárias do café diminuem em até 11% o risco de insuficiência cardíaca, que é uma condição em que o coração não consegue bombear o sangue adequadamente para o corpo</p>
+            <p>O café acelera o metabolismo e a queima de gordura. De acordo com um estudo publicado no International Journal of Sports Nutrition e no Scandinavian Journal of Medicine and Science in Sports, a queima de gordura ocorre devido à ativação do sistema nervoso simpático e a oxidação lipídica. A cafeína aumenta os níveis de adrenalina no sangue, que dilui as células de gordura e as libera para o sangue</p>
+            <p>Diversos estudos científicos comprovam que o consumo moderado do café pode diminuir a glicemia no sangue de pessoas com diabetes. Em uma pesquisa, com cerca de 200 mil pessoas nos EUA, Europa e Ásia, comprovou-se uma redução de 35% no risco do surgimento de diabetes de quem consumiam pelo menos duas xícaras da bebida por dia</p>
+            <p>O café é considerado um estimulante energético, e não é apenas fama. A bebida realmente deixa o organismo mais ativo. As substâncias presentes no poderoso grão fazem com que o rendimento do corpo aumente e combatem o sono e o cansaço</p>
+          </div>
+        </figcaption>
+
+        <img onclick="mostrarModalGar()" src="../imagens/main/Sobre/icons/coffeePot.png" alt="Garrafa de café">
+        <figcaption id="garH" class="cardHover">
+          <h4>Cuidados ao Consumo de Café</h4>
+          <div>
+            <p>O consumo diário de café costuma ser seguro. No entanto, pode ser deletério diante da sua ingestão em excesso. Essa avaliação deve sempre ser individualizada devido, dentre outros fatores, a diferentes características genéticas que podem potencializar ou não a ação da cafeína ingerida. </p>
+            <p>Diante de quadros de insônia, ansiedade e inquietude, dificuldade de concentração e palpitações, é importante avaliar se o consumo de cafeína não está sendo exagerado, estando atento que a substância está presente em diversos produtos alimentícios como os refrigerantes a base de cola, chás gelados e suplementos esportivos.
+            </p>
+            <p> No caso dessa suspeição, é fundamental reduzir o consumo ou até mesmo suspender, a depender de cada caso.</p>
+          </div>
+        </figcaption>
+
+        <img onclick="mostrarModalXic()" src="../imagens/main/Sobre/icons/coffeeCup.png" alt="Xícara de café">
+        <figcaption id="xicH" class="cardHover">
+          <h4>Como preparar um bom Café</h4>
+          <div>
+            <p>Escolha um café de qualidade</p>
+            <p>Atente para a moagem do café</p>
+            <p>Verifique a temperatura da água</p>
+            <p>Armazene o café adequadamente</p>
+            <p>E siga sua intuição com testes, apesar de tudo um bom café é aquele que você gosta</p>
+          </div>
+        </figcaption>
       </figure>
       <div class="sectionText">
-        <h2 id="sobre">Sobre</h2>
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facere voluptate praesentium sed sint nobis cum excepturi perferendis, tempore dolorem mollitia deleniti, quisquam fugiat quaerat quidem debitis dolores sit ullam explicabo!</p>
+        <h2>Sobre</h2>
+        <p>O café é constituído de água, algumas vitaminas, minerais, dentre magnésio, cálcio, sódio e, principalmente, potássio, e pela cafeína, que é um composto alcalóide xantina (1,3,7-trimetilxantina).</p>
+
+        <p>Tradicionalmente, a ingestão da cafeína é realizada por meio do popular “cafezinho”, mas está disponível em diferentes formas na atualidade, desde bebidas geladas, preparados prontos, suplementos alimentares e medicamentos.</p>
+
+        <p>A quantidade de cafeína contida em uma xícara de café pode variar bastante, a depender da origem do café ou da composição da mescla (combinação dos grãos), do método de preparo, dentre outros fatores. Em geral, o café solúvel apresenta menos cafeína em relação ao torrado e moído.</p>
       </div>
     </section>
 
-    <section class="origem">
+    <section class="origem" id="origem">
       <section class="origemTop">
         <div class="origemTextTop">
-          <h2 id="origem">Origem</h2>
-          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facere voluptate praesentium sed sint nobis cum excepturi perferendis, tempore dolorem mollitia deleniti, quisquam fugiat quaerat quidem debitis dolores sit ullam explicabo!</p>
-          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facere voluptate praesentium sed sint nobis cum excepturi perferendis, tempore dolorem mollitia deleniti, quisquam fugiat quaerat quidem debitis dolores sit ullam explicabo!</p>
+          <h2>Origem</h2>
+          <p>A origem exata do café é extremamente incerta, mas muitos estudiosos a remetem ao século IX, nas terras altas da Etiópia. Justamente pela incapacidade de encontrar um local específico, diversas lendas sobre o surgimento do grão foram criadas.</p>
         </div>
         <figure class="figSection">
           <img src="../imagens/main/Origem/coffeeOrigem.jpg" alt="Gãos de café">
@@ -91,24 +132,31 @@
           <img src="../imagens/main/Origem/coffeeOrigem2.jpg" alt="Gãos de café">
         </figure>
         <div class="origemTextBot">
-          <h3>Origem</h3>
-          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facere voluptate praesentium sed sint nobis cum excepturi perferendis, tempore dolorem mollitia deleniti, quisquam fugiat quaerat quidem debitis dolores sit ullam explicabo!</p>
-          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facere voluptate praesentium sed sint nobis cum excepturi perferendis, tempore dolorem mollitia deleniti, quisquam fugiat quaerat quidem debitis dolores sit ullam explicabo!</p>
+          <h3>Cultura do Consumo de Café</h3>
+          <p>A cultura do café teve diferentes perspectivas ao redor do mundo. Para os árabes, a ingestão até mesmo in natura estava relacionada principalmente com as propriedades estimulantes dos frutos.</p>
+          <p>Com o surgimento das primeiras cafeterias, o consumo ganhou um aspecto social e esses lugares se tornaram pontos de encontro entre comerciantes para negócios e lazer.</p>
+
+          <p>Na Europa, tomar café virou um hábito associado aos encontros sociais. Considerada uma bebida de prestígio na sociedade, era consumida por pessoas do alto escalão europeu. Também foi nesse continente, mais precisamente em Veneza, na Itália, que se iniciou o costume de coar o café e acrescentar leite a ele.</p>
         </div>
       </section>
     </section>
-    <section class="lenda">
+    <section class="lenda" id="lenda">
       <div class="sectionText">
         <h2>Lenda</h2>
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facere voluptate praesentium sed sint nobis cum excepturi perferendis, tempore dolorem mollitia deleniti, quisquam fugiat quaerat quidem debitis dolores sit ullam explicabo!</p>
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facere voluptate praesentium sed sint nobis cum excepturi perferendis, tempore dolorem mollitia deleniti, quisquam fugiat quaerat quidem debitis dolores sit ullam explicabo!</p>
+        <p>A origem do café é cercada de lendas e mitos e a mais conhecida é a de Kaldi, um pastor de cabras de Kaffa. Na época que ocorre a lenda, a Etiópia ainda se chamava Abissínia. Conta-se que Kaldi estava pastoreando suas cabras através de uma área montanhosa perto de um mosteiro. Ele notou que elas estavam se comportando muito estranhamente naquele dia, e começaram a pular de uma maneira excitada, balindo alto e praticamente dançando em suas pernas traseiras.</p>
+
+        <p>Ele descobriu que a fonte da excitação era um pequeno arbusto com frutos vermelhos brilhantes. Ele ficou extremamente curioso e comeu as frutas. Como as cabras, Kaldi sentiu os efeitos energizantes das cerejas de café. Depois de encher os bolsos com as frutas vermelhas, ele correu para sua esposa em casa, e ela o aconselhou a ir ao mosteiro próximo a fim de compartilhar esses frutos “enviados do céu” com os monges. Ao chegar ao mosteiro, os grãos de café de Kaldi não foram saudados com alegria, mas com desdém.</p>
+        <p>Um monge chamou a recompensa de Kaldi de “o trabalho do diabo” e jogou-o no fogo.</p>
+        <p>
+          No entanto, o aroma dos grãos torrados foi suficiente para fazer os monges darem a esta novidade uma segunda chance. Eles removeram o café do fogo, esmagaram-no para apagar as brasas brilhantes e cobriram-nas com água quente em um jarro para preservá-las. Todos os monges do mosteiro cheiravam o aroma do café e vinham experimentá-lo. Assim como os monges budistas que bebiam chá da China e do Japão, esses monges descobriram que os efeitos edificantes do café eram benéficos para mantê-los despertos durante a prática espiritual de orações e devoções santas. Eles prometeram que a partir de então eles beberiam essa bebida recém-descoberta a cada dia como uma ajuda para suas devoções religiosas.
+        </p>
       </div>
       <figure class="figSection">
         <img src="../imagens/main/Lenda/coffeeLenda.webp" alt="Gãos de café">
       </figure>
     </section>
-    <section class="videos">
-      <h2>Videos</h2>
+    <section class="videos" id="videos">
+      <h2>Saiba mais sobre o Café</h2>
       <div>
         <iframe max-width="560" width="560" height="315" src="https://www.youtube.com/embed/5hcj3QtRVmM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         <iframe max-width="560" width="560" height="315" src="https://www.youtube.com/embed/bX41y4snTLk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -116,7 +164,7 @@
     </section>
   </main>
   <footer>
-    <section class="infos">
+    <section class="infos" id="info">
       <div class="infosFacul">
         <p>Unirios - centro Universitário do Rio São Francisco</p>
         <p>Site Construído na aula da disciplicna de intriducção à Tecnologia à Web Curso de Sistema de Informação</p>
@@ -133,6 +181,9 @@
       </div>
     </section>
   </footer>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <script src="../plugins/scripts/index.js"></script>
+  <script src="../plugins/scripts/cards.js"></script>
 </body>
 
 </html>
