@@ -29,10 +29,6 @@ header {
   height: 100%;
 }
 
-#inicioDec {
-  text-decoration: underline;
-  text-shadow: 2px 2px 2px;
-}
 
 .container {
   width: 100%;
@@ -135,6 +131,8 @@ h1 span {
 .menuHover li:hover {
   width: 100%;
   background-color: var(--cor-3);
+  transition: .5s all;
+
 }
 
 
