@@ -1,0 +1,26 @@
+.caminho {
+  max-width: 1400px;
+  margin: 0 auto;
+  height: 100%;
+  display: flex;
+  background: linear-gradient(#fff, #BA9E66, #462D24, #301E18, #231612);
+}
+
+.linha {
+  margin-left: 20em;
+  border-left: solid #462D24 5px;
+}
+
+.historia {
+  padding: .4em;
+  background-color: #D4B273;
+  margin-left: 2em;
+  border-radius: 1em;
+  width: 25em;
+  height: 12em;
+  margin-bottom: 3em;
+}
+
+.historia p {
+  font-size: .8rem;
+}
